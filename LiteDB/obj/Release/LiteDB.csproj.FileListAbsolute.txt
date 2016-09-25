@@ -1,0 +1,13 @@
+D:\Development\Libraries\LiteDB\LiteDB\bin\Release\LiteDB.dll.config
+D:\Development\Libraries\LiteDB\LiteDB\bin\Release\LiteDB.dll
+D:\Development\Libraries\LiteDB\LiteDB\bin\Release\LiteDB.pdb
+D:\Development\Libraries\LiteDB\LiteDB\bin\Release\EntityFramework.dll
+D:\Development\Libraries\LiteDB\LiteDB\bin\Release\EntityFramework.SqlServer.dll
+D:\Development\Libraries\LiteDB\LiteDB\bin\Release\System.Data.SQLite.dll
+D:\Development\Libraries\LiteDB\LiteDB\bin\Release\System.Data.SQLite.EF6.dll
+D:\Development\Libraries\LiteDB\LiteDB\bin\Release\System.Data.SQLite.Linq.dll
+D:\Development\Libraries\LiteDB\LiteDB\bin\Release\EntityFramework.xml
+D:\Development\Libraries\LiteDB\LiteDB\bin\Release\EntityFramework.SqlServer.xml
+D:\Development\Libraries\LiteDB\LiteDB\bin\Release\System.Data.SQLite.xml
+D:\Development\Libraries\LiteDB\LiteDB\obj\Release\LiteDB.dll
+D:\Development\Libraries\LiteDB\LiteDB\obj\Release\LiteDB.pdb

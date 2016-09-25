@@ -1,0 +1,1 @@
+D:\Development\Libraries\LiteDB\Examples\DebugApplication\bin\Release\DebugApplication.exe.config
