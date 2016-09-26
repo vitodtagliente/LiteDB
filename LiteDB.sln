@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{46
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebugApplication", "Examples\DebugApplication\DebugApplication.csproj", "{05C01476-CB5B-4C2E-8876-E8F18F536300}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteDB.Forms", "LiteDB.Forms\LiteDB.Forms.csproj", "{BB1CF7C9-C7D4-4C9A-832F-0BB54A53D0AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{05C01476-CB5B-4C2E-8876-E8F18F536300}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05C01476-CB5B-4C2E-8876-E8F18F536300}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05C01476-CB5B-4C2E-8876-E8F18F536300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB1CF7C9-C7D4-4C9A-832F-0BB54A53D0AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB1CF7C9-C7D4-4C9A-832F-0BB54A53D0AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB1CF7C9-C7D4-4C9A-832F-0BB54A53D0AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB1CF7C9-C7D4-4C9A-832F-0BB54A53D0AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

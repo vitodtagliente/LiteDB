@@ -4,14 +4,17 @@ D:\Development\Libraries\LiteDB\Examples\DebugApplication\bin\Debug\DebugApplica
 D:\Development\Libraries\LiteDB\Examples\DebugApplication\bin\Debug\EntityFramework.dll
 D:\Development\Libraries\LiteDB\Examples\DebugApplication\bin\Debug\EntityFramework.SqlServer.dll
 D:\Development\Libraries\LiteDB\Examples\DebugApplication\bin\Debug\LiteDB.dll
+D:\Development\Libraries\LiteDB\Examples\DebugApplication\bin\Debug\LiteDB.Forms.dll
 D:\Development\Libraries\LiteDB\Examples\DebugApplication\bin\Debug\System.Data.SQLite.dll
 D:\Development\Libraries\LiteDB\Examples\DebugApplication\bin\Debug\System.Data.SQLite.EF6.dll
 D:\Development\Libraries\LiteDB\Examples\DebugApplication\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Development\Libraries\LiteDB\Examples\DebugApplication\bin\Debug\LiteDB.Forms.pdb
 D:\Development\Libraries\LiteDB\Examples\DebugApplication\bin\Debug\LiteDB.pdb
 D:\Development\Libraries\LiteDB\Examples\DebugApplication\bin\Debug\EntityFramework.xml
 D:\Development\Libraries\LiteDB\Examples\DebugApplication\bin\Debug\EntityFramework.SqlServer.xml
 D:\Development\Libraries\LiteDB\Examples\DebugApplication\bin\Debug\System.Data.SQLite.xml
 D:\Development\Libraries\LiteDB\Examples\DebugApplication\obj\Debug\DebugApplication.csprojResolveAssemblyReference.cache
+D:\Development\Libraries\LiteDB\Examples\DebugApplication\obj\Debug\DebugApplication.AdapterForm.resources
 D:\Development\Libraries\LiteDB\Examples\DebugApplication\obj\Debug\DebugApplication.GridForm.resources
 D:\Development\Libraries\LiteDB\Examples\DebugApplication\obj\Debug\DebugApplication.csproj.GenerateResource.Cache
 D:\Development\Libraries\LiteDB\Examples\DebugApplication\obj\Debug\DebugApplication.exe

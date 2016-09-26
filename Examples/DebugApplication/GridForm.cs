@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LiteDB;
+using LiteDB.Forms;
 
 namespace DebugApplication
 {
@@ -21,14 +22,8 @@ namespace DebugApplication
 
         private void GridForm_Load(object sender, EventArgs e)
         {
-            var db = LiteDatabase.singleton;
 
-            var dataTable = new DataTable();
-            var sqlAdatper = new SQLiteDataAdapter("SELECT * FROM " + LiteSchema<Prova>.Name(), db.Connection);
-            sqlAdatper.Fill(dataTable);
-            dataGridView1.DataSource = dataTable;
-
-            sqlAdatper.Dispose();
+            dataGridView1.BindQuery("SELECT * FROM " + LiteSchema<Prova>.Name());            
             
         }
     }

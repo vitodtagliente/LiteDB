@@ -11,3 +11,4 @@ D:\Development\Libraries\LiteDB\LiteDB\bin\Release\EntityFramework.SqlServer.xml
 D:\Development\Libraries\LiteDB\LiteDB\bin\Release\System.Data.SQLite.xml
 D:\Development\Libraries\LiteDB\LiteDB\obj\Release\LiteDB.dll
 D:\Development\Libraries\LiteDB\LiteDB\obj\Release\LiteDB.pdb
+D:\Development\Libraries\LiteDB\LiteDB\obj\Release\LiteDB.csprojResolveAssemblyReference.cache

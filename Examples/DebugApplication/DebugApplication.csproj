@@ -68,6 +68,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdapterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdapterForm.Designer.cs">
+      <DependentUpon>AdapterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GridForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,12 +89,19 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\LiteDB.Forms\LiteDB.Forms.csproj">
+      <Project>{bb1cf7c9-c7d4-4c9a-832f-0bb54a53d0aa}</Project>
+      <Name>LiteDB.Forms</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\LiteDB\LiteDB.csproj">
       <Project>{9d7cb58e-ab0b-4329-9976-231e9316b1de}</Project>
       <Name>LiteDB</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdapterForm.resx">
+      <DependentUpon>AdapterForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GridForm.resx">
       <DependentUpon>GridForm.cs</DependentUpon>
     </EmbeddedResource>

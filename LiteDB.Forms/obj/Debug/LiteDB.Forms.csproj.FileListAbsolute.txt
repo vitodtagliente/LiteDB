@@ -1,0 +1,16 @@
+D:\Development\Libraries\LiteDB\LiteDB.Forms\bin\Debug\LiteDB.Forms.dll.config
+D:\Development\Libraries\LiteDB\LiteDB.Forms\bin\Debug\LiteDB.Forms.dll
+D:\Development\Libraries\LiteDB\LiteDB.Forms\bin\Debug\LiteDB.Forms.pdb
+D:\Development\Libraries\LiteDB\LiteDB.Forms\bin\Debug\EntityFramework.dll
+D:\Development\Libraries\LiteDB\LiteDB.Forms\bin\Debug\EntityFramework.SqlServer.dll
+D:\Development\Libraries\LiteDB\LiteDB.Forms\bin\Debug\LiteDB.dll
+D:\Development\Libraries\LiteDB\LiteDB.Forms\bin\Debug\System.Data.SQLite.dll
+D:\Development\Libraries\LiteDB\LiteDB.Forms\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Development\Libraries\LiteDB\LiteDB.Forms\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Development\Libraries\LiteDB\LiteDB.Forms\bin\Debug\LiteDB.pdb
+D:\Development\Libraries\LiteDB\LiteDB.Forms\bin\Debug\EntityFramework.xml
+D:\Development\Libraries\LiteDB\LiteDB.Forms\bin\Debug\EntityFramework.SqlServer.xml
+D:\Development\Libraries\LiteDB\LiteDB.Forms\bin\Debug\System.Data.SQLite.xml
+D:\Development\Libraries\LiteDB\LiteDB.Forms\obj\Debug\LiteDB.Forms.csprojResolveAssemblyReference.cache
+D:\Development\Libraries\LiteDB\LiteDB.Forms\obj\Debug\LiteDB.Forms.dll
+D:\Development\Libraries\LiteDB\LiteDB.Forms\obj\Debug\LiteDB.Forms.pdb

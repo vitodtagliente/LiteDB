@@ -38,7 +38,7 @@ namespace LiteDB
 
                 str.Append(comma);
                 str.Append("'");
-                str.Append(dictionary[key]);
+                str.Append(dictionary[key].ToString().Replace("'", "\'"));
                 str.Append("'");
 
                 comma = ", ";
@@ -93,7 +93,7 @@ namespace LiteDB
                 str.Append(comma);
                 str.Append(key);
                 str.Append(" = '");
-                str.Append(dictionary[key]);
+                str.Append(dictionary[key].ToString().Replace("'", "\'"));
                 str.Append("'");
 
                 comma = " AND ";

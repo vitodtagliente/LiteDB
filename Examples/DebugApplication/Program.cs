@@ -47,6 +47,11 @@ namespace DebugApplication
             var form = new GridForm();
             form.ShowDialog();
 
+            //  Apri l'adapter form
+
+            var form1 = new AdapterForm();
+            form1.ShowDialog();
+
             //  Chiudi il database
 
             db.Close();
