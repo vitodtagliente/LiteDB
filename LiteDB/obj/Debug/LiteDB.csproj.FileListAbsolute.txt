@@ -9,5 +9,6 @@ D:\Development\Libraries\LiteDB\LiteDB\bin\Debug\System.Data.SQLite.Linq.dll
 D:\Development\Libraries\LiteDB\LiteDB\bin\Debug\EntityFramework.xml
 D:\Development\Libraries\LiteDB\LiteDB\bin\Debug\EntityFramework.SqlServer.xml
 D:\Development\Libraries\LiteDB\LiteDB\bin\Debug\System.Data.SQLite.xml
+D:\Development\Libraries\LiteDB\LiteDB\obj\Debug\LiteDB.csprojResolveAssemblyReference.cache
 D:\Development\Libraries\LiteDB\LiteDB\obj\Debug\LiteDB.dll
 D:\Development\Libraries\LiteDB\LiteDB\obj\Debug\LiteDB.pdb

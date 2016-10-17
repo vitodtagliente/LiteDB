@@ -36,6 +36,32 @@ namespace LiteDB
             return Drop(out exception, db);
         }
 
+        public static bool Exists(LiteDatabase db = null)
+        {
+            string exception = string.Empty;
+            return Exists(out exception, db);
+        }
+
+        public static bool Exists(out string exception, LiteDatabase db = null)
+        {
+            exception = string.Empty;
+            var instance = Activator.CreateInstance<T>();
+            if (db == null) db = LiteDatabase.singleton;
+            if (db == null)
+            {
+                return false;
+            }
+
+            var reader = db.Query.SelectWithException("SELECT 1 FROM " + instance.Tablename + " LIMIT 1", out exception);
+            if (reader != null && reader.Read())
+            {
+                reader.Close();
+                return true;
+            }
+
+            return false;
+        }
+
         public static bool Create(out string exception, LiteDatabase db = null)
         {
             exception = string.Empty;

@@ -94,7 +94,48 @@ namespace LiteDB
                 return Update(out exception, db);
             else return Insert(out exception, db);
         }
-        
+
+        public bool New(LiteDatabase db = null)
+        {
+            return Insert(db);
+        }
+
+        public bool New(out string exception, LiteDatabase db = null)
+        {
+            exception = string.Empty;
+            return Insert(out exception, db);
+        }
+
+        public bool Delete(LiteDatabase db = null)
+        {
+            string exception = string.Empty;
+            return Delete(out exception, string.Empty, db);
+        }
+
+        public bool Delete(string condition, LiteDatabase db = null)
+        {
+            string exception = string.Empty;
+            return Delete(out exception, string.Empty, db);
+        }
+
+        public bool Delete(out string exception, string condition = null, LiteDatabase db = null)
+        {
+            exception = string.Empty;
+            if (Exists() == false) return false;
+
+            if (db == null) db = LiteDatabase.singleton;
+
+            string query = this.ToDeleteQuery();
+            if (string.IsNullOrEmpty(condition) == false)
+                query = this.ToDeleteQuery(condition);
+
+            var result = db.Query.InsertWithException(query, out exception);
+            //  Rendi il modello inutilizzabile per gli aggiornamenti
+            if (result)
+                this.Id = 0;
+            return result;
+        }
+
         //  Converte un modello in un dizionario del tipo attributo:valore
 
         public Dictionary<string, object> ToDictionary()

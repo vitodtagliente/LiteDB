@@ -37,16 +37,20 @@ namespace LiteDB
 
         public bool Alive { get; private set; }
 
-        public void Close()
+        public void Close(bool clearAll = true)
         {
             try
             {
                 Connection.Close();
                 Connection.Dispose();
-                SQLiteConnection.ClearAllPools();
+                if (clearAll)
+                    SQLiteConnection.ClearAllPools();
                 Alive = false;
             }
             catch (Exception) { }
+
+            if (singleton == this)
+                singleton = null;
         }
     }
 }

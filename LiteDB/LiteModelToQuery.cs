@@ -38,13 +38,38 @@ namespace LiteDB
 
                 str.Append(comma);
                 str.Append("'");
-                str.Append(dictionary[key].ToString().Replace("'", "\'"));
+                str.Append(dictionary[key]);
                 str.Append("'");
 
                 comma = ", ";
             }
 
             str.Append(" ) ");
+
+            return str.ToString();
+        }
+
+        public static string ToDeleteQuery(this LiteModel model)
+        {
+            StringBuilder str = new StringBuilder();
+
+            str.Append("DELETE FROM ");
+            str.Append(model.Tablename);
+            str.Append(" WHERE Id = '");
+            str.Append(model.Id);
+            str.Append("'");
+
+            return str.ToString();
+        }
+
+        public static string ToDeleteQuery(this LiteModel model, string condition)
+        {
+            StringBuilder str = new StringBuilder();
+
+            str.Append("DELETE FROM ");
+            str.Append(model.Tablename);
+            str.Append(" WHERE ");
+            str.Append(condition);
 
             return str.ToString();
         }
@@ -93,7 +118,7 @@ namespace LiteDB
                 str.Append(comma);
                 str.Append(key);
                 str.Append(" = '");
-                str.Append(dictionary[key].ToString().Replace("'", "\'"));
+                str.Append(dictionary[key]);
                 str.Append("'");
 
                 comma = " AND ";
