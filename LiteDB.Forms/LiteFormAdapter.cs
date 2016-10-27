@@ -26,7 +26,9 @@ namespace LiteDB.Forms
                 var field = type.GetField(bind.Key);
                 if (field == null) continue;
 
-                bind.Value.Text = field.GetValue(model).ToString();
+                var value = field.GetValue(model);
+                if (value != null)
+                    bind.Value.Text = value.ToString();
             }
         }
 

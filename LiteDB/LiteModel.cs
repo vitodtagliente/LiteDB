@@ -28,6 +28,15 @@ namespace LiteDB
             }
             else Tablename = type.Name;
 
+            // Inizializza i datetime con la data corrente
+
+            var fields = type.GetFields();
+            foreach (var field in fields)
+            {               
+                object value = field.GetValue(this);
+                if (value != null && value.GetType() == typeof(DateTime))
+                    field.SetValue(this, DateTime.Now);
+            }
         }
         
         //  Accesso con Reflection agli attributi del modello
@@ -152,6 +161,8 @@ namespace LiteDB
                 if (field.Equals("Tablename")) continue;
 
                 object value = field.GetValue(this);
+                if (value != null && value.GetType() == typeof(DateTime))
+                    value = ((DateTime)field.GetValue(this)).ToString("yyyy-MM-dd HH:mm:ss");
                 dictionary.Add(field.Name, value);
 
             }

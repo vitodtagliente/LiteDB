@@ -29,7 +29,7 @@ namespace DebugApplication
             Console.WriteLine("Tablename: " + LiteSchema<Prova>.Name());
 
             //  Operazioni dui modelli
-
+            
             var model = new Prova();
             model.Nome = "aaa";
             if (model.Store())
@@ -39,35 +39,18 @@ namespace DebugApplication
             var records = db.All<Prova>();
             foreach(var record in records)
             {
+                Console.WriteLine(record.Data.AddDays(50));
                 Console.WriteLine(record.ToString());                
             }
 
-            //  Apri una griglia cn gli elementi
+            Console.WriteLine("Elements Count: ");
+            Console.WriteLine(LiteSchema<Prova>.Count());
 
-            var form = new GridForm();
-            form.ShowDialog();
+            var adapterForm = new AdapterForm();
+            adapterForm.ShowDialog();
 
-            //  Apri l'adapter form
-
-            var form1 = new AdapterForm();
-            form1.ShowDialog();
-
-            //  Chiudi il database
-
-            db.Close();
-
-            Console.WriteLine("Chiusura...");
-
-            Console.WriteLine("Status Open:" + db.Alive);
-            
-            //  Testa la corretta chiusura del file
-
-            var rd = new StreamReader("prova.db");
-            string content = rd.ReadToEnd();
-            rd.Close();
-            rd.Dispose();
-
-            Console.WriteLine("File aperto in esterno con successo!");
+            var gridForm = new GridForm();
+            gridForm.ShowDialog();
 
             Console.ReadKey();
         }

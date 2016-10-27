@@ -62,6 +62,26 @@ namespace LiteDB
             return false;
         }
 
+        public static void Clear(LiteDatabase db = null)
+        {
+            if (db == null) db = LiteDatabase.singleton;
+            db.Query.Insert("DELETE FROM " + Name());
+        }
+
+        public static int Count(LiteDatabase db = null)
+        {
+            return Count(string.Empty);
+        }
+
+        public static int Count(string condition, LiteDatabase db = null)
+        {
+            if (db == null) db = LiteDatabase.singleton;
+            if (string.IsNullOrEmpty(condition) == false)
+                condition = " WHERE " + condition;
+
+            return db.Query.Count("SELECT COUNT(*) FROM " + Name() + condition);
+        }
+
         public static bool Create(out string exception, LiteDatabase db = null)
         {
             exception = string.Empty;

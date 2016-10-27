@@ -16,6 +16,7 @@ namespace DebugApplication
             adapter = new LiteFormAdapter<Prova>();
             adapter.BindControl("Nome", txt_nome);
             adapter.BindControl("Id", numericUpDown1);
+            adapter.BindControl("Data", dateTimePicker1);
         }
 
         private void AdapterForm_Load(object sender, EventArgs e)

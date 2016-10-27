@@ -9,5 +9,7 @@ namespace DebugApplication
     public class Prova : LiteDB.LiteModel
     {
         public string Nome;
+
+        public DateTime Data;
     }
 }

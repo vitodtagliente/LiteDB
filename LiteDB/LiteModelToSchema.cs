@@ -20,7 +20,7 @@ namespace LiteDB
                 return "REAL";
             else if (obj.GetType() == typeof(bool))
                 return "TEXT";
-            return string.Empty;
+            return "TEXT";
         }
 
         static string ToSQLiteAttributes(this LiteModel model, string name) 
