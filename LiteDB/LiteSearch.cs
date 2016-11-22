@@ -74,6 +74,9 @@ namespace LiteDB
 
             var list = new List<T>();
 
+            if (db == null || db.Alive == false)
+                return list;
+
             var reader = db.Query.Select(query.ToString());
 
             while (reader != null && reader.Read())
@@ -114,6 +117,9 @@ namespace LiteDB
             query.Append(instance.Tablename);
             query.Append(" WHERE ");
             query.Append(condition);
+
+            if (db == null || db.Alive == false)
+                return list;
             
             var reader = db.Query.Select(query.ToString());
 
