@@ -48,6 +48,15 @@ namespace LiteDB
                     var fieldType = instance.GetType().GetField(name).FieldType;
                     Type converTo = Nullable.GetUnderlyingType(fieldType) ?? fieldType;
 
+                    // Ci sono problemi nella coversione nel momento in cui 
+                    // il campo è un DateTime e la stringa è in formato 00.00.00 anzicchè 00:00:00
+
+                    // DateTime Fix
+                    if (converTo == typeof(DateTime) && value.ToString().Contains("."))
+                    {
+                        value = value.ToString().Replace(".", ":");
+                    }
+
                     var newValue = Convert.ChangeType(value, converTo);
 
                     instance[name] = newValue;
@@ -92,6 +101,12 @@ namespace LiteDB
                     var fieldType = instance.GetType().GetField(name).FieldType;
                     Type converTo = Nullable.GetUnderlyingType(fieldType) ?? fieldType;
 
+                    // DateTime Fix
+                    if (converTo == typeof(DateTime) && value.ToString().Contains("."))
+                    {
+                        value = value.ToString().Replace(".", ":");
+                    }
+
                     element[name] = Convert.ChangeType(value, converTo);
                 }
 
@@ -135,6 +150,12 @@ namespace LiteDB
 
                     var fieldType = instance.GetType().GetField(name).FieldType;
                     Type converTo = Nullable.GetUnderlyingType(fieldType) ?? fieldType;
+
+                    // DateTime Fix
+                    if (converTo == typeof(DateTime) && value.ToString().Contains("."))
+                    {
+                        value = value.ToString().Replace(".", ":");
+                    }
 
                     element[name] = Convert.ChangeType(value, converTo);
                 }
