@@ -34,8 +34,10 @@ namespace LiteDB
             foreach (var field in fields)
             {               
                 object value = field.GetValue(this);
-                if (value != null && value.GetType() == typeof(DateTime))
-                    field.SetValue(this, DateTime.Now);
+                if (value != null) {
+                    if (value.GetType() == typeof(DateTime))
+                        field.SetValue(this, DateTime.Now);
+                } 
             }
         }
         
@@ -161,8 +163,12 @@ namespace LiteDB
                 if (field.Equals("Tablename")) continue;
 
                 object value = field.GetValue(this);
-                if (value != null && value.GetType() == typeof(DateTime))
-                    value = ((DateTime)field.GetValue(this)).ToString("yyyy-MM-dd HH:mm:ss");
+                if (value != null) {
+                    if (value.GetType() == typeof(DateTime))
+                        value = ((DateTime)field.GetValue(this)).ToString("yyyy-MM-dd HH:mm:ss");
+                    else if (value.GetType() == typeof(float))
+                        value = value.ToString().Replace(",", ".");
+                } 
                 dictionary.Add(field.Name, value);
 
             }

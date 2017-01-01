@@ -56,6 +56,11 @@ namespace LiteDB
                     {
                         value = value.ToString().Replace(".", ":");
                     }
+                    // Float fix
+                    if(converTo == typeof(float) && value.ToString().Contains("."))
+                    {
+                        value = value.ToString().Replace(".", ",");
+                    }
 
                     var newValue = Convert.ChangeType(value, converTo);
 
@@ -105,6 +110,11 @@ namespace LiteDB
                     if (converTo == typeof(DateTime) && value.ToString().Contains("."))
                     {
                         value = value.ToString().Replace(".", ":");
+                    }
+                    // Float fix
+                    if (converTo == typeof(float) && value.ToString().Contains("."))
+                    {
+                        value = value.ToString().Replace(".", ",");
                     }
 
                     element[name] = Convert.ChangeType(value, converTo);
