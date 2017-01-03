@@ -42,6 +42,7 @@ namespace LiteDB
             try
             {
                 Connection.Close();
+                Connection.Shutdown();
                 Connection.Dispose();
                 if (clearAll)
                     SQLiteConnection.ClearAllPools();
