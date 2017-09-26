@@ -80,11 +80,18 @@ namespace LiteDB
 
         public static List<T> All<T>(this LiteDatabase db) where T : LiteModel
         {
+            return All<T>(db, string.Empty);
+        }
+
+        public static List<T> All<T>(this LiteDatabase db, string expression) where T : LiteModel
+        {
             var instance = Activator.CreateInstance<T>();
 
             StringBuilder query = new StringBuilder();
             query.Append("SELECT * FROM ");
             query.Append(instance.Tablename);
+            query.Append(" ");
+            query.Append(expression);
 
             var list = new List<T>();
 
