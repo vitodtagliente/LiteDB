@@ -164,7 +164,9 @@ namespace LiteDB
 
                 object value = field.GetValue(this);
                 if (value != null) {
-                    if (value.GetType() == typeof(DateTime))
+                    if (value.GetType() == typeof(string))
+                        value = ((string)field.GetValue(this)).Replace("'", "''").Trim();
+                    else if (value.GetType() == typeof(DateTime))
                         value = ((DateTime)field.GetValue(this)).ToString("yyyy-MM-dd HH:mm:ss");
                     else if (value.GetType() == typeof(float))
                         value = value.ToString().Replace(",", ".");
